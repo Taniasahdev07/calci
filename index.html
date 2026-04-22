@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>To-Do App</title>
+    <title>Ultimate Calculator 🍬</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>My To-Do List 📝</h1>
+<div class="calculator">
 
-    <input type="text" id="taskInput" placeholder="Enter task">
-    <button onclick="addTask()">Add</button>
+    <button onclick="toggleTheme()" id="themeBtn">🌈 Theme</button>
 
-    <ul id="taskList"></ul>
+    <input type="text" id="display" disabled>
 
-    <script src="script.js"></script>
+    <div id="history"></div>
+
+    <div class="buttons">
+        <button onclick="clearDisplay()">🧹</button>
+        <button onclick="appendValue('(')">😊</button>
+        <button onclick="appendValue(')')">😉</button>
+        <button onclick="appendValue('/')">➗</button>
+
+        <button onclick="appendValue('7')">7️⃣</button>
+        <button onclick="appendValue('8')">8️⃣</button>
+        <button onclick="appendValue('9')">9️⃣</button>
+        <button onclick="appendValue('*')">✖️</button>
+
+        <button onclick="appendValue('4')">4️⃣</button>
+        <button onclick="appendValue('5')">5️⃣</button>
+        <button onclick="appendValue('6')">6️⃣</button>
+        <button onclick="appendValue('-')">➖</button>
+
+        <button onclick="appendValue('1')">1️⃣</button>
+        <button onclick="appendValue('2')">2️⃣</button>
+        <button onclick="appendValue('3')">3️⃣</button>
+        <button onclick="appendValue('+')">➕</button>
+
+        <button onclick="appendValue('0')" class="big">0️⃣</button>
+        <button onclick="appendValue('.')">🔘</button>
+        <button onclick="calculate()">✅</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
